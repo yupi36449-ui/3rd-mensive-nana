@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Mensive! ❤️</title>
+    <style>
+        body {
+            background-color: #ffe6ea;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 100%;
+            width: 400px;
+        }
+        h1 {
+            color: #ff4d6d;
+            margin-bottom: 5px;
+        }
+        /* Tambahan kode untuk mengatur ukuran foto */
+        .foto {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 15px;
+            margin: 15px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none; /* Disembunyikan dulu sampai tombol diklik */
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed #ff4d6d;
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #c9184a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menambahkan elemen audio untuk lagu -->
+    <audio id="musik" src="lagu-romantis.mp3" loop></audio>
+
+    <div class="card">
+        <h1>Happy 3rd Mensiveeeee! 🥳</h1>
+        <p>Hiiiiii <b>Nanaa elkie rusa sipaling leopard</b>, aku lagi nyoba web dari matkul LPP aku, coba dibuka yeeeeeee</p>
+        
+        <button id="tombolBuka" onclick="bukaPesan()">Coba klik e-eh bener ga yah...</button>
+        
+        <!-- Menambahkan foto -->
+        <img src="foto-kita.jpg" alt="Foto Kita" id="fotoMensive" class="foto">
+
+        <div id="pesan" class="hidden-message">
+            <p>ASTAGAAAA ADEK PSKH? selamat tanggal 30 ke-3 dari bulan Juli, nyang artinyeeeee 3 bulan aje nih WOWWW JOSJIS YNK!!!!!!</p>
+            <p>Semoga hal-hal baik selalu datang ke kamu, aku, dan kita ya.. I love you prinses, I'm sooo happy bisa bareng sama kamu.</p>
+            <p>In this economy, eh maksudnya in this life dan yaaaah misalkan emang beneran ada after life, aku selalu berharap dan berdoa yang terbaik buat kamu. Makaaasihhh udah kuat, udah josjis, udah slebew menamatkan UTBK 2026 di prodi dan PTN impian. Please do not push urself too hard ya.. </p>
+            <p>"I seem to get brighter and it's all because of you" - Grrrl Gang</p>
+            <p>Maaf aku gabisa buatin kata-kata yang puitis atau apa, nanti aku janji akan belajar jugaaa :)) </p>
+
+        </div>
+    </div>
+
+    <script>
+        function bukaPesan() {
+            // Memunculkan pesan rahasia
+            document.getElementById("pesan").style.display = "block";
+            // Memunculkan foto
+            document.getElementById("fotoMensive").style.display = "inline-block";
+            // Menghilangkan tombol setelah diklik
+            document.getElementById("tombolBuka").style.display = "none";
+            // Memutar lagu
+            document.getElementById("musik").play();
+        }
+    </script>
+
+</body>
+</html>
